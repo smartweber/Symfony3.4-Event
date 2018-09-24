@@ -28,9 +28,12 @@ class MeetingEventFormType extends AbstractType
                     'Meeting' => 'Meeting'
                 ]
             ])
-            ->add('participants', TextareaType::class)
+            ->add('participants', TextareaType::class, [
+                'label' => 'Participants (Please input participants with enter key)'
+            ])
             ->add('roomNumber', TextType::class, [
-                'required' => true
+                'required' => true,
+                'label' => 'Room Number'
             ])
         ;
     }

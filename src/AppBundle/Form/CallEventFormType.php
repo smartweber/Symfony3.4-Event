@@ -25,7 +25,9 @@ class CallEventFormType extends AbstractType
                     'Call' => 'Call'
                 ]
             ])
-            ->add('participants', TextareaType::class)
+            ->add('participants', TextareaType::class, [
+                'label' => 'Participants (Please input participants with enter key)'
+            ])
         ;
     }
 
