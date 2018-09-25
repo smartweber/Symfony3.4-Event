@@ -238,7 +238,7 @@ class EventController extends Controller
         }
     }
 
-    public function sendMail( \Swift_Mailer $mailer, $sendTo, $title, $meg) {
+    public function sendMail(\Swift_Mailer $mailer, $sendTo, $title, $meg) {
         $message = (new \Swift_Message($title))
         ->setFrom('no-reply@test.com')
         ->setTo($sendTo)
